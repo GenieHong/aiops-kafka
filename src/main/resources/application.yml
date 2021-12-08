@@ -16,11 +16,6 @@ spring:
         mechanism: SCRAM-SHA-512
       security:
         protocol: SASL_SSL
-      # ssl:
-      #   truststore:
-      #     location: /Users/giun/ca.crt        
-      # linger:
-      #   ms: 100
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer   

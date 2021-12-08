@@ -59,7 +59,7 @@ public class AIOpsController {
         eventMessage.setOccurrenceTime(new Date());
         eventMessage.setExpirySeconds(0);
 
-        for (int i=0; i<1; i++) {
+        for (int i=0; i<100; i++) {
             eventMessage.setDeduplicationKey("EventAnalyticsSelfMonitoring" + i);
             eventSender.sendEventMessage(eventMessage);
         }
