@@ -16,8 +16,11 @@ spring:
         mechanism: SCRAM-SHA-512
       security:
         protocol: SASL_SSL
-      linger:
-        ms: 100
+      # ssl:
+      #   truststore:
+      #     location: /Users/giun/ca.crt        
+      # linger:
+      #   ms: 100
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer   
@@ -25,3 +28,4 @@ spring:
 
 kafka-topic:
   aiops-tpd: cp4waiops-cartridge-alerts-none-o38j8s9a
+
