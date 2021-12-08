@@ -8,7 +8,7 @@ spring:
     name: aiops-instana
 
   kafka:
-    bootstrap-servers: ${KAFKA_HOST:iaf-system-kafka-bootstrap-cp4waiops.apps.demo.ibm-aiops.com}
+    bootstrap-servers: ${KAFKA_HOST:iaf-system-kafka-bootstrap-cp4waiops.apps.demo.ibm-aiops.com:443}
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer   
