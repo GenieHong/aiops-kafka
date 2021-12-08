@@ -9,6 +9,15 @@ spring:
 
   kafka:
     bootstrap-servers: ${KAFKA_HOST:iaf-system-kafka-0-cp4waiops.apps.demo.ibm-aiops.com:443}
+    properties:
+      sasl:
+        jaas:
+          config: "org.apache.kafka.common.security.scram.ScramLoginModule required username=cp4waiops-cartridge-kafka-auth password=nnHG4EDvdG8T"
+        mechanism: SCRAM-SHA-512
+      security:
+        protocol: SASL_SSL
+      linger:
+        ms: 100
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer   
